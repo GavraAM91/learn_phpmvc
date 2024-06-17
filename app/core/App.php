@@ -1,8 +1,20 @@
 <?php
 
-class App {
+class App
+{
 
-    public function __construct() {
-        echo 'OK';
+    public function __construct()
+    {
+        $url = $this->parseURL();
+        var_dump($url);
+    }
+
+    //untuk mendapatkan url yang dikirim oleh user
+    public function parseURL()
+    {
+        if (isset($_GET['url'])) {
+            $url = $_GET['url'];
+            return $url;
+        }
     }
 }

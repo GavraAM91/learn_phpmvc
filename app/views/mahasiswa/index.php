@@ -2,15 +2,14 @@
     <div class="row">
         <div class="col-6">
             <h3>Daftar Mahasiswa</h3>
-
-            <?php foreach($data['mhs'] as $mhs) {?>
-                <ul>
-                    <li><?= $mhs['nama'];?></li>
-                    <li><?= $mhs['no_telp'];?></li>
-                    <li><?= $mhs['email'];?></li>
-                    <li><?= $mhs['jurusan'];?></li>
-                </ul>
-            <?php } ?>
+            <ul class="list-group">
+                <?php foreach ($data['mhs'] as $mhs) { ?>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <?= $mhs['nama'];?>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge text-bg-primary">Detail</a>
+                    </li>
+                <?php } ?>
+            </ul>
         </div>
     </div>
 </div>

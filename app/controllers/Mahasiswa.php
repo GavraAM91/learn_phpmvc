@@ -16,4 +16,12 @@ class Mahasiswa extends Controller{
         $this->view('mahasiswa/detail', $data); //mengirimkan data nya ke dalam detail.php
         $this->view('template/footer');
     }
+
+    public function tambah() {
+        
+        if($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0 ) {
+            header('Location: '. BASEURL . '/Mahasiswa');
+            exit;
+        }
+    }
 }

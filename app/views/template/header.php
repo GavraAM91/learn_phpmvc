@@ -6,7 +6,7 @@
     <title>Halaman <?= $data['judul']; ?></title>
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.min.css">  
 </head>
 <body>
 

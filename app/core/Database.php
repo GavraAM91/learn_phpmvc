@@ -72,4 +72,8 @@ class Database
         return $this->stmt->fetch(PDO::FETCH_ASSOC); //mengirimkan atau mendapatkan data sesuai dari permintaan program menurut id
     }
 
+    public function rowCount() {
+        return $this->stmt->rowCount();
+    }
+
 }

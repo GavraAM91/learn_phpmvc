@@ -47,12 +47,12 @@ class Mahasiswa_model
     
     public function ubahDataMahasiswa($data) {
 
-        $query = "UPDATE `mahasiswa` SET 
+        $query = 'UPDATE '. $this->table .' SET 
                     nama = :nama,
                     no_telp = :no_telp,
                     email = :email,
                     jurusan = :jurusan 
-                    WHERE id = :id ";
+                    WHERE id = :id ';
 
         $this->db->query($query);
         $this->db->bind('nama', $data['nama']);
